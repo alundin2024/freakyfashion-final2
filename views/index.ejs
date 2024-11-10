@@ -1,11 +1,342 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/output.css' />
+    <!-- <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>Freaky Fashion</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/magnifier.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p class="text-3xl text-red-500">Welcome to <%= title %></p>
+    <header>
+      <section class="header">
+        <div class="mainlogoContainer">
+          <a href="/"
+            ><img
+              class="mainlogo"
+              src="images/freakyfashion,mainlogo.webp"
+              alt="Logotyp"
+          /></a>
+        </div>
+        <div class="searchContainer">
+          <div class="searchbar">
+            <br />
+            <input
+              class="mainLoginInput"
+              type="text"
+              placeholder="&#61442; Sök produkt"
+            />
+          </div>
+          <div class="headerIcons">
+            <a href=""
+              ><img
+                class="header-heart"
+                src="icons/heart-fill.svg "
+                alt="Heart Icon"
+            /></a>
+            <a href=""
+              ><img
+                class="basket"
+                src="icons/basket2-fill.svg"
+                alt="Basket Icon"
+            /></a>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="topmenu">
+        <nav aria-label="primary-navigation">
+          <a href="#nyheter" class="topmenuFontDesign">Nyheter</a>
+          <br />
+          <a href="#topplistan" class="topmenuFontDesign">Topplistan</a>
+          <br />
+          <a href="#rea" class="topmenuFontDesign">Rea</a>
+          <br />
+          <a href="#kampanjer" class="topmenuFontDesign">Kampanjer</a>
+        </nav>
+      </section>
+
+      <section class="hero">
+        <div class="fieldsetHero">
+          <img
+            src="images\main,logo,freakyfashion.jpg"
+            alt="Welcome Picture"
+            class="heropicture heroFirstPage"
+          />
+          <div>
+            <h1 class="welcome">Välkommen till Freaky Fashion!</h1>
+            <br />
+            <h3 class="heroInfotext">
+              Hos oss hittar du det senaste modet, till det bästa priset & med
+              den bästa kundservicen du någonsin stött på.
+              <br />
+              Vi erbjuder öpppet köp i 100 dagar & ett attraktivt bonussystem
+              för våra mest trogna kunder.
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="spots">
+        <article class="spotsProducts-1">
+          <a href="product-details.html"
+            ><img
+              src="images\tshirt,darkblue,new.webp"
+              alt="Mörkblå T-Shirt"
+              title="En snygg mörkblå t-shirt!"
+              class="tshirt-darkblue spotProduct"
+          /></a>
+          <div class="spot-text-1">
+            <h2>Erjudande T-Shirts</h2>
+          </div>
+        </article>
+        <article class="spotsProducts-2">
+          <a href=""
+            ><img
+              src="images\leatherjacket,black.webp"
+              alt="Svart läderjacka"
+              title="En snygg svart läderjacka!"
+              class="leatherjacket spotProduct"
+          /></a>
+          <div class="spot-text-2">
+            <h2>Erbjudande Jackor</h2>
+          </div>
+        </article>
+        <article class="spotsProducts-3">
+          <a href=""
+            ><img
+              src="images\jeans,denim.webp"
+              alt="Jeans"
+              title="Ett par snygga jeans!"
+              class="jeans spotProduct"
+          /></a>
+          <div class="spot-text-3">
+            <h2>Erbjudande Byxor</h2>
+          </div>
+        </article>
+      </section>
+      <section class="products">
+        <!-- 
+        Skapa en funktion som kan kalla på mitt api. 
+        Därefter let products = []
+        Skapa en forEach-loop för min skapade lista i products(ovan)
+        Rendera ut genom att calla på ex. products eller likande, se exempel från Jonathan i disc.
+
+        Logga hela flödet. (Console.log)
+        -->
+        <article class="first-product-shown">
+          
+          <a href="product-details"
+            ><img
+              src="images\tshirt,white.jpg"
+              alt="Vit T-Shirt"
+              title="En snygg vit t-shirt!"
+              class="first-tshirt productsFirstPage"
+          /></a>
+          <a href=""
+            ><img
+              class="heart-filled"
+              src="icons\heart,fill.svg"
+              alt="Favorit-markerad"
+          /></a>
+
+          <h2>Vit T-Shirt</h2>
+          <div class="nyhet">
+            <h3 class="nyhetBox">Nyhet</h3>
+          </div>
+          <h4 class="prisProducts">299 SEK</h4>
+          <h4>Levis</h4>
+        </article>
+        <article class="other-products">
+          <img
+            src="images\tshirt,white,branded.jpg"
+            alt="Vit T-Shirt med Tryck"
+            title="En snygg vit t-shirt med tryck!"
+            class="tshirt productsFirstPage"
+          />
+          <a href=""
+            ><img class="heart" src="icons\heart.svg" alt="Favorit-markera"
+          /></a>
+
+          <h2>Vit T-Shirt med tryck</h2>
+          <h4 class="prisProducts">399 SEK</h4>
+          <h4>Brothers</h4>
+        </article>
+        <article class="other-products">
+          <img
+            src="images\tshirt,orange.jpg"
+            alt="Orange T-Shirt"
+            title="En snygg orange t-shirt!"
+            class="tshirt productsFirstPage"
+          />
+          <a href=""
+            ><img class="heart" src="icons\heart.svg" alt="Favorit-markera"
+          /></a>
+
+          <h2>Orange T-Shirt</h2>
+          <h4 class="prisProducts">349 SEK</h4>
+          <h4>Zalando</h4>
+        </article>
+        <article class="other-products">
+          <img
+            src="images\pinkshirt.jpg"
+            alt="Rosa T-Shirt"
+            title="En snygg rosa t-shirt!"
+            class="tshirt productsFirstPage"
+          />
+          <a href=""
+            ><img class="heart" src="icons\heart.svg" alt="Favorit-markera"
+          /></a>
+
+          <h2>Rosa T-Shirt</h2>
+          <h4 class="prisProducts">349 SEK</h4>
+          <h4>Minus</h4>
+        </article>
+        <article class="other-products">
+          <img
+            src="images\pants,orange.jpg"
+            alt="Orange Byxor"
+            title="Ett par snygga orangea byxor!"
+            class="tshirt productsFirstPage"
+          />
+          <a href=""
+            ><img class="heart" src="icons\heart.svg" alt="Favorit-markera"
+          /></a>
+
+          <h2>Orangea Byxor</h2>
+          <h4 class="prisProducts">599 SEK</h4>
+          <h4>Lindex</h4>
+        </article>
+        <article class="other-products">
+          <img
+            src="images\pants,beige.jpg"
+            alt="Beige Byxor"
+            title="Ett par snygga beiga byxor!"
+            class="tshirt productsFirstPage"
+          />
+          <a href=""
+            ><img class="heart" src="icons\heart.svg" alt="Favorit-markera"
+          /></a>
+
+          <h2>Beige Byxor</h2>
+          <h4 class="prisProducts">1999 SEK</h4>
+          <h4>Gucci</h4>
+        </article>
+        <article class="other-products">
+          <img
+            src="images\manchester,jacket.jpg"
+            alt="En rosa jacka i manchester-tyg"
+            title="En snygg rosa manchester-jacka!"
+            class="tshirt productsFirstPage"
+          />
+          <a href=""
+            ><img class="heart" src="icons\heart.svg" alt="Favorit-markera"
+          /></a>
+
+          <h2>Manchester Jacka</h2>
+          <h4 class="prisProducts">2495 SEK</h4>
+          <h4>Levis</h4>
+        </article>
+        <article class="other-products">
+          <img
+            src="images\duffelbag.jpg"
+            alt="En magväska"
+            title="En snygg magväska!"
+            class="tshirt productsFirstPage"
+          />
+          <a href=""
+            ><img class="heart" src="icons\heart.svg" alt="Favorit-markera"
+          /></a>
+
+          <h2>Magväska</h2>
+          <h4 class="prisProducts">995 SEK</h4>
+          <h4>Hugo Boss</h4>
+        </article>
+      </section>
+
+      <section class="info">
+        <div class="more-info">
+          <img id="earth" src="icons\earth.svg" alt="Jordklot" />
+          <p class="frakt">Gratis frakt och returer</p>
+        </div>
+
+        <div class="more-info">
+          <img id="airplane" src="icons\airplane.svg" alt="Flygplan" />
+          <p>Expressfrakt</p>
+        </div>
+
+        <div class="more-info">
+          <img id="shield" src="icons\shield.svg" alt="Sköld" />
+          <p>Säkra betalningar</p>
+        </div>
+
+        <div class="more-info">
+          <img id="smile" src="icons\emoji,smile.svg" alt="Smiley" />
+          <p>Nyheter varje dag</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <div class="wideFooter">
+          <div class="wideFooterShopping">
+            <h4>Shopping</h4>
+            <a href="">Vinterjackor</a>
+            <a href="">Pufferjackor</a>
+            <a href=""> Kappa </a>
+            <a href="">Trenchcoats</a>
+          </div>
+          <div class="wideFooterMinaSidor">
+            <h4>Shopping</h4>
+            <a href="">Vinterjackor</a>
+            <a href="">Pufferjackor</a>
+            <a href=""> Kappa </a>
+            <a href="">Trenchcoats</a>
+          </div>
+          <div class="wideFooterKundtjänst">
+            <h4>Kundtjänst</h4>
+            <a href="">Returnpolicy</a>
+            <a href="">Integritetspolicy</a>
+            <a href=""></a>
+            <a href=""></a>
+          </div>
+        </div>
+        <div style="text-align: center" class="copyright">
+          &copy; Freaky Fashion
+        </div>
+      </div>
+
+      <div class="detailsFooter">
+        <details>
+          <summary class="shopping bold">Shopping</summary>
+
+          <a href="" class="menuItem">Vinterjackor</a>
+
+          <a href="" class="menuItem">Pufferjackor</a>
+
+          <a href="" class="menuItem">Kappa</a>
+
+          <a href="" class="menuItem">Trenchcoats</a>
+        </details>
+        <details>
+          <summary class="minasidor bold">Mina Sidor</summary>
+          <a href="" class="menuItem">Mina Ordrar</a>
+
+          <a href="" class="menuItem">Mitt Konto</a>
+        </details>
+        <details>
+          <summary class="kundtjanst bold">Kundtjänst</summary>
+          <a href="" class="menuItem">Returnpolicy</a>
+
+          <a href="" class="menuItem">Integritetspolicy</a>
+        </details>
+        <div style="text-align: center" class="copyrightDetails">
+          &copy; Freaky Fashion
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

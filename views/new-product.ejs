@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Administration</title>
+    <link rel="stylesheet" href="styles,new.css" />
+  </head>
+  <body>
+    <h1>Administration</h1>
+    <main>
+      <aside class="aside">
+        <h3 class="produkter">Produkter</h3>
+      </aside>
+      <section class="section">
+        <h2>Ny produkt</h2>
+        <h3>Namn</h3>
+        <input type="text" id="namn" />
+        <h3>Beskrivning</h3>
+        <input type="text" id="beskrivning"/>
+        <h3>Bild</h3>
+        <input type="file" name="bild" id="bild" />
+        <h3>SKU</h3>
+        <input type="text" id="sku" />
+        <h3>Pris</h3>
+        <input type="number" id="pris" name="pris" />
+        <h3>Kategorier</h3>
+        <div class="kategorier">
+          <input type="checkbox" id="tshirts" name="tshirts" value="TShirts" />
+          <label for="tshirts">T-Shirts</label>
+          <input type="checkbox" id="sommar" name="sommar" value="Sommar" />
+          <label for="sommar">Sommar</label>
+          <input type="checkbox" id="byxor" name="byxor" value="Byxor" />
+          <label for="byxor">Byxor</label>
+          <input type="checkbox" id="skor" name="skor" value="Skor" />
+          <label for="skor">Skor</label>
+        </div>
+        <br>
+        <a href=""><button type="button">Lägg till</button></a>
+      </section>
+    </main>
+  </body>
+</html>

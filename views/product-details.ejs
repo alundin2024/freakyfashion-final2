@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <!-- <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>Freaky Fashion</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/magnifier.css" />
+  </head>
+  <body>
+    <header>
+      <section class="header">
+        <div class="mainlogoContainer">
+          <a href="index"
+            ><img
+              class="mainlogo"
+              src="images/freakyfashion,mainlogo.webp"
+              alt="Logotyp"
+          /></a>
+        </div>
+        <div class="searchContainer">
+          <div class="searchbar">
+            <br />
+            <input
+              class="mainLoginInput"
+              type="text"
+              placeholder="&#61442; Sök produkt"
+            />
+          </div>
+          <div class="headerIcons">
+            <a href=""
+              ><img
+                class="header-heart"
+                src="icons/heart-fill.svg "
+                alt="Heart Icon"
+            /></a>
+            <a href=""
+              ><img
+                class="basket"
+                src="icons/basket2-fill.svg"
+                alt="Basket Icon"
+            /></a>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="topmenu">
+        <nav aria-label="primary-navigation">
+          <a href="#about" class="topmenuFontDesign">Nyheter</a>
+          <br />
+          <a href="#menu" class="topmenuFontDesign">Topplistan</a>
+          <br />
+          <a href="hours.html" class="topmenuFontDesign">Rea</a>
+          <br />
+          <a href="contact.html" class="topmenuFontDesign">Kampanjer</a>
+        </nav>
+      </section>
+
+      <section class="productsDetails">
+            <!-- 
+        Skapa en funktion som kan kalla på mitt api. 
+        Därefter let products = []
+        Jämför URL-path med products-listan (products.js)
+        Rendera ut genom att calla på ex. products eller likande, se exempel från Jonathan i disc.
+
+        Logga hela flödet. (Console.log)
+        -->
+        <article class="first-product-shown">
+          <div class="firstProductContainer">
+            <img
+              src="images\tshirt,white.jpg"
+              alt="Svart T-Shirt"
+              title="En snygg svart t-shirt!"
+              class="first-tshirt first-t-shirt-details"
+            />
+          </div>
+          <a href=""
+            ><img
+              class="heart heartDetails"
+              src="icons\heart.svg"
+              alt="Favorit-markera"
+          /></a>
+        </article>
+        <br />
+        <div class="productDetailsText">
+          <h2>Vit T-Shirt</h2>
+          <h4>Levis</h4>
+          <br />
+          <h5>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo quia
+            alias beatae assumenda aspernatur molestiae quae iusto perferendis
+            cum! Provident corrupti veritatis autem asperiores expedita quo
+            mollitia officiis cum blanditiis! Magni eos corrupti quidem hic vel
+            illo.
+          </h5>
+          <br />
+          <h4>199 SEK</h4>
+          <br />
+          <button class="button buttonDetails" type="button">
+            Lägg i varukorg
+          </button>
+        </div>
+      </section>
+      <section class="liknandeProdukter">
+        <h2 style="text-align: center">Liknande produkter</h2>
+      </section>
+
+      <section class="sectionSpotDetails">
+        <!-- Random hämta tre produkter från listan -->
+
+        <div class="spotsDetails">
+          <article class="spotsDetailsProducts-1">
+            <a href="product-details.html"
+              ><img
+                src="images\tshirt,darkblue,new.webp"
+                alt="Mörkblå T-Shirt"
+                title="En snygg mörkblå t-shirt!"
+                class="tshirt-darkblue"
+            /></a>
+            <h4>Blå T-Shirt</h4>
+            <h4 class="priceTshirtDarkblue">299 SEK</h4>
+            <h5>Polarn & Pyret</h5>
+          </article>
+          <article class="spotsDetailsProducts-2">
+            <a href=""
+              ><img
+                src="images\leatherjacket,black.webp"
+                alt="Svart läderjacka"
+                title="En snygg svart läderjacka!"
+                class="leatherjacket"
+            /></a>
+            <h4>Svart Läderjacka</h4>
+            <h4 class="priceJacket">799 SEK</h4>
+            <h5>Brothers</h5>
+          </article>
+          <article class="spotsDetailsProducts-3">
+            <a href=""
+              ><img
+                src="images\jeans,denim.webp"
+                alt="Jeans"
+                title="Ett par snygga jeans!"
+                class="jeans"
+            /></a>
+            <h4>Blåa Jeans</h4>
+            <h4 class="priceJeans">1099 SEK</h4>
+            <h5>Lee</h5>
+          </article>
+        </div>
+      </section>
+
+      <section class="info">
+        <div class="more-info">
+          <img id="earth" src="icons\earth.svg" alt="Jordklot" />
+          <p class="frakt">Gratis frakt och returer</p>
+        </div>
+
+        <div class="more-info">
+          <img id="airplane" src="icons\airplane.svg" alt="Flygplan" />
+          <p>Expressfrakt</p>
+        </div>
+
+        <div class="more-info">
+          <img id="shield" src="icons\shield.svg" alt="Sköld" />
+          <p>Säkra betalningar</p>
+        </div>
+
+        <div class="more-info">
+          <img id="smile" src="icons\emoji,smile.svg" alt="Smiley" />
+          <p>Nyheter varje dag</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <div class="wideFooter">
+          <div class="wideFooterShopping">
+            <h4>Shopping</h4>
+            <a href="">Vinterjackor</a>
+            <a href="">Pufferjackor</a>
+            <a href=""> Kappa </a>
+            <a href="">Trenchcoats</a>
+          </div>
+          <div class="wideFooterMinaSidor">
+            <h4>Shopping</h4>
+            <a href="">Vinterjackor</a>
+            <a href="">Pufferjackor</a>
+            <a href=""> Kappa </a>
+            <a href="">Trenchcoats</a>
+          </div>
+          <div class="wideFooterKundtjänst">
+            <h4>Kundtjänst</h4>
+            <a href="">Returnpolicy</a>
+            <a href="">Integritetspolicy</a>
+            <a href=""></a>
+            <a href=""></a>
+          </div>
+        </div>
+        <div style="text-align: center" class="copyright">
+          &copy; Freaky Fashion
+        </div>
+      </div>
+
+      <div class="detailsFooter">
+        <details>
+          <summary class="shopping bold">Shopping</summary>
+
+          <a href="" class="menuItem">Vinterjackor</a>
+
+          <a href="" class="menuItem">Pufferjackor</a>
+
+          <a href="" class="menuItem">Kappa</a>
+
+          <a href="" class="menuItem">Trenchcoats</a>
+        </details>
+        <details>
+          <summary class="minasidor bold">Mina Sidor</summary>
+          <a href="" class="menuItem">Mina Ordrar</a>
+
+          <a href="" class="menuItem">Mitt Konto</a>
+        </details>
+        <details>
+          <summary class="kundtjanst bold">Kundtjänst</summary>
+          <a href="" class="menuItem">Returnpolicy</a>
+
+          <a href="" class="menuItem">Integritetspolicy</a>
+        </details>
+        <div style="text-align: center" class="copyrightDetails">
+          &copy; Freaky Fashion
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

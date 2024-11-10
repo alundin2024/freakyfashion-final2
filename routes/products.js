@@ -1,4 +1,6 @@
 const { name } = require("ejs");
+const express = require('express');
+const router = express.Router();
 
 // Skapa här arrayn för produkterna för startsida.
 // Array = Objekt med ID, Titel, Brand, Pris, Bild, Lorem.
@@ -84,5 +86,9 @@ const products = [
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
   },
 ];
-
 // Skapa ett API (GET) - Skickar data till vår fe.
+router.get('/', (req, res) => {
+    res.json(products);
+});
+
+module.exports = router;

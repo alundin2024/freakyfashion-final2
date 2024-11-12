@@ -122,22 +122,26 @@
         Skapa en forEach-loop för min skapade array för products.
         Rendera ut genom att calla på products.
         -->
-        <div class="products">
-          <% products.forEach(product => { %>
-          <div class="product">
-            <h2><%= product.name %></h2>
-            <p><%= product.brand %></p>
-            <p><%= product.price %></p>
 
-            <% if (product.image) { %>
-            <img src="<%= product.image %>" alt="<%= product.title %>" />
-            <% } %>
-            <button class="like-button">
-              <%= product.isLiked ? 'Liked' : 'Like' %>
-            </button>
+        <!-- Bäddar in hela div-en med a-tag för ref mot product details -->
+        <a href="product-details">
+          <div class="products">
+            <% products.forEach(product => { %>
+            <div class="product">
+              <h2><%= product.name %></h2>
+              <p><%= product.brand %></p>
+              <p><%= product.price %></p>
+
+              <% if (product.image) { %>
+              <img src="<%= product.image %>" alt="<%= product.title %>" />
+              <% } %>
+              <button class="like-button">
+                <%= product.isLiked ? 'Liked' : 'Like' %>
+              </button>
+            </div>
+            <% }) %>
           </div>
-          <% }) %>
-        </div>
+        </a>
       </section>
 
       <section class="info">

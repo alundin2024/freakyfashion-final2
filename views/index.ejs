@@ -124,10 +124,11 @@
         -->
 
         <!-- Bäddar in hela div-en med a-tag för ref mot product details -->
-        <a href="product-details">
+        
           <div class="products">
             <% products.forEach(product => { %>
             <div class="product">
+              <a href="/product-details/<%= product.id %>"></a>
               <h2><%= product.name %></h2>
               <p><%= product.brand %></p>
               <p><%= product.price %></p>
@@ -141,7 +142,7 @@
             </div>
             <% }) %>
           </div>
-        </a>
+        
       </section>
 
       <section class="info">

@@ -102,8 +102,9 @@ const products = [
 
 /* GET product-details page. */
 router.get("/", function (req, res, next) {
-  console.log("Funkar också!");
+  
   res.render("product-details", { title: "Product Details", products });
+  console.log("Funkar också!");
 });
 
 module.exports = router;

@@ -6,6 +6,7 @@ var logger = require("morgan");
 
 var indexRouter = require("./routes/index");
 var productDetailsRouter = require("./routes/product-details");
+var adminRouter = require("./routes/admin");
 
 var app = express();
 
@@ -21,6 +22,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/product-details", productDetailsRouter);
+app.use("/admin", adminRouter);
+
+
 
 app.get("/admin", function (req, res) {
   // req = request-objektet innehåller information om anropet
@@ -33,7 +37,7 @@ app.get("/admin", function (req, res) {
   });
 });
 
-// POST /register
+// POST /admin TEST.
 app.post("/admin", function (req, res) {
   // Data som skickas från frontend (webbläsaren), som angivits
   // i formuläret finns tillgänglig för oss att använda på backend

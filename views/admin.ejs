@@ -14,37 +14,33 @@
         <h2 class="sectionProdukter">Produkter</h2>
 
         <!-- Lägg till "Ladda produkter-knapp"
-              Skapa en tom lista
-              Skapa sedan en funktion som adderar data från get-request till listan
-              PAUS.
         -->
 
         <a href="approved.html"
           ><button class="button" type="button">Ny produkt</button></a
         >
+        <form method="post">
+          <label for="name">Namn</label>
+          <input type="text" name="name" id="name" />
 
-        <table>
-          <tr>
-            <th class="tableHead1">Namn</th>
-            <th class="tableHead1">SKU</th>
-            <th class="tableHead1">Pris</th>
-          </tr>
-          <tr>
-            <td class="tableCell1">Svart T-Shirt</td>
-            <td class="tableCell1">AAA111</td>
-            <td class="tableCell1">199</td>
-          </tr>
-          <tr>
-            <td>Vit T-Shirt</td>
-            <td>BBB111</td>
-            <td>199</td>
-          </tr>
-          <tr>
-            <td class="tableCell3">...</td>
-            <td class="tableCell3"></td>
-            <td class="tableCell3"></td>
-          </tr>
-        </table>
+          <label for="description">Beskrivning</label>
+          <input type="text" name="description" id="description" />
+
+          <label for="image">Bild</label>
+          <!-- Ändra input type nedan till bild.-->
+          <input type="text" name="image" id="image" />
+
+          <label for="brand"> Märke</label>
+          <input type="text" name="brand" id="brand" />
+
+          <label for="sku">SKU</label>
+          <input type="text" name="sku" id="sku" />
+
+          <label for="price">Pris</label>
+          <input type="text" name="price" id="price" />
+
+          <button type="submit">Lägg till</button>
+        </form>
       </section>
     </main>
   </body>

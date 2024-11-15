@@ -28,7 +28,7 @@ app.use("/admin", adminRouter);
 
 app.get("/admin", function (req, res) {
   // req = request-objektet innehåller information om anropet
-  // t.ex. att det är ett GET-arnop, och att URL är /register.
+  // t.ex. att det är ett GET-arnop, och att URL är /admin.
 
   // res = response-objektet använder vi för att skicka tillbaka ett
   // svar till klienten.

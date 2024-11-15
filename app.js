@@ -26,19 +26,19 @@ app.use("/admin", adminRouter);
 
 
 
-app.get("/admin", function (req, res) {
+app.get("/new", function (req, res) {
   // req = request-objektet innehåller information om anropet
   // t.ex. att det är ett GET-arnop, och att URL är /admin.
 
   // res = response-objektet använder vi för att skicka tillbaka ett
   // svar till klienten.
-  res.render("admin", {
+  res.render("new", {
     title: "Administration",
   });
 });
 
 // POST /admin TEST.
-app.post("/admin", function (req, res) {
+app.post("/new", function (req, res) {
   // Data som skickas från frontend (webbläsaren), som angivits
   // i formuläret finns tillgänglig för oss att använda på backend
   // (alltså här =) via egenskapen "body" på request-objektet (req).

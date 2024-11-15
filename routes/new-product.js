@@ -7,7 +7,7 @@ var router = express.Router();
 
 /* GET admin page. */
 router.get('/', function(req, res, next) {
-  res.render('new-product', { title: 'Ny produkt'});
+  res.render('new', { title: 'Administration'});
   console.log("Funkar definitvt också!");
 });
 

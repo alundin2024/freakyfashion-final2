@@ -3,9 +3,10 @@
   <head>
     <title>Administration</title>
     <link rel="stylesheet" href="/stylesheets/style,new.css" />
+    <script></script>
   </head>
   <body>
-    <h1><% title %></h1>
+    <h1><%= title %></h1>
 
     <main class="main">
       <section class="section">
@@ -13,7 +14,7 @@
           <h3 class="produkter">Produkter</h3>
         </aside>
         <h2 class="sectionProdukter">Ny produkt</h2>
-        <form method="post">
+        <form id="form" method="post">
           <label for="productName">Namn</label>
           <input type="text" name="productName" id="productName" />
 
@@ -22,7 +23,7 @@
 
           <label for="image">Bild</label>
           <!-- Ändra input type nedan till bild.-->
-          <input type="text" name="image" id="image" />
+          <input type="file" name="image" id="image" />
 
           <label for="brand"> Märke</label>
           <input type="text" name="brand" id="brand" />

@@ -11,7 +11,7 @@ h1 {
 }
 
 h2 {
-  padding: 20px; 
+  padding: 20px;
 }
 .aside {
   position: relative;
@@ -20,14 +20,8 @@ h2 {
   border: 1px solid black;
   width: 8%;
   height: 1000px;
+  margin-right: 1rem;
 }
-
-label,
-input,
-button {
-  display: block;
-}
-
 form {
   padding: 50px;
 }
@@ -37,48 +31,40 @@ form {
   top: 0px;
   margin-top: 10px;
 }
-.sectionProdukter {
-  position: relative;
-  top: 20px;
-  left: 20px;
-}
-table {
-  position: relative;
-  width: 25%;
-  top: 40px;
-  left: 20px;
-}
-th {
-  text-align: left;
-}
-th,
-td {
-  border: 1px solid black;
-}
-.tableHead1 {
-  background-color: grey;
-}
-.tableCell1 {
-  background-color: rgb(236, 236, 236);
-}
-.tableCell3 {
-  background-color: rgb(236, 236, 236);
-}
-.button {
+
+.button1 {
   position: absolute;
   width: 90px;
   height: 30px;
-  right: 67%;
-  top: 90px;
+  right: 48%;
+  top: 100px;
+}
+.button2 {
+  position: absolute;
+  width: 90px;
+  height: 30px;
+  right: 42%;
+  top: 100px;
 }
 h3 {
   position: relative;
   top: 40px;
   left: 20px;
 }
-#namn {
-  position: relative;
-  top: 40px;
-  left: 20px;
-  width: 150px;
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td,
+th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+  height: 20px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
 }

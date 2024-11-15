@@ -5,42 +5,58 @@
     <link rel="stylesheet" href="/stylesheets/style,admin.css" />
   </head>
   <body>
-    <h1><% title %></h1>
+    <h1><%= title %></h1>
     <aside class="aside">
       <h3 class="produkter">Produkter</h3>
     </aside>
     <main>
       <section class="section">
-        <h2 class="sectionProdukter">Produkter</h2>
-
-        <!-- Lägg till "Ladda produkter-knapp"
-        -->
-
-        <a href="new-product"
-          ><button class="button" type="button">Ny produkt</button></a
-        >
-        <form method="post">
-          <label for="productName">Namn</label>
-          <input type="text" name="productName" id="productName" />
-
-          <label for="description">Beskrivning</label>
-          <input type="text" name="description" id="description" />
-
-          <label for="image">Bild</label>
-          <!-- Ändra input type nedan till bild.-->
-          <input type="text" name="image" id="image" />
-
-          <label for="brand"> Märke</label>
-          <input type="text" name="brand" id="brand" />
-
-          <label for="sku">SKU</label>
-          <input type="text" name="sku" id="sku" />
-
-          <label for="price">Pris</label>
-          <input type="text" name="price" id="price" />
-
-          <button type="submit">Lägg till</button>
-        </form>
+        <div class>
+          <h2 class="sectionProdukter">Produkter</h2>
+          <a href="new"
+            ><button class="button1" type="button">Ny produkt</button></a
+          >
+          <a href="new-product"
+            ><button class="button2" type="button">Ladda produkt</button></a
+          >
+        </div>
+        <table>
+          <tr>
+            <th>Namn</th>
+            <th>SKU</th>
+            <th>Pris</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
       </section>
     </main>
   </body>

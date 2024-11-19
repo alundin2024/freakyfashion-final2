@@ -83,7 +83,7 @@ app.post("/new", function (req, res) {
 
   // Nu kommer SQL-kommandot köras (INSERT INTO)
   insert.run(product);
-
+  res.redirect('admin');  
 });
 
 // catch 404 and forward to error handler

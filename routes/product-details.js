@@ -9,8 +9,7 @@ const products = [
     brand: "Levis",
     price: "299 SEK",
     image: "/images/tshirt,white.jpg",
-    isNew: true,
-    isLiked: false,
+    isLiked: true,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
   },
@@ -21,8 +20,7 @@ const products = [
     brand: "Brothers",
     price: "399 SEK",
     image: "/images/tshirt,white,branded.jpg",
-    isNew: true,
-    isLiked: false,
+    isLiked: true,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
   },
@@ -33,8 +31,7 @@ const products = [
     brand: "Zalando",
     price: "349 SEK",
     image: "/images/tshirt,orange.jpg",
-    isNew: true,
-    isLiked: false,
+    isLiked: true,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
   },
@@ -45,8 +42,7 @@ const products = [
     brand: "Minus",
     price: "349 SEK",
     image: "/images/pinkshirt.jpg",
-    isNew: true,
-    isLiked: false,
+    isLiked: true,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
   },
@@ -57,8 +53,7 @@ const products = [
     brand: "Lindex",
     price: "599 SEK",
     image: "/images/pants,orange.jpg",
-    isNew: true,
-    isLiked: false,
+    isLiked: true,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
   },
@@ -69,8 +64,7 @@ const products = [
     brand: "Gucci",
     price: "1999 SEK",
     image: "/images/pants,beige.jpg",
-    isNew: true,
-    isLiked: false,
+    isLiked: true,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
   },
@@ -81,8 +75,7 @@ const products = [
     brand: "Levis",
     price: "2495 SEK",
     image: "/images/manchester,jacket.jpg",
-    isNew: true,
-    isLiked: false,
+    isLiked: true,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
   },
@@ -93,8 +86,7 @@ const products = [
     brand: "Hugo Boss",
     price: "995 SEK",
     image: "/images/duffelbag.jpg",
-    isNew: true,
-    isLiked: false,
+    isLiked: true,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
   },
@@ -102,22 +94,21 @@ const products = [
 
 /* GET product-details page. */
 router.get("/:id", function (req, res, next) {
-
   const productId = parseInt(req.params.id);
-  const product = products.find(p => p.id === productId);
+  const product = products.find((p) => p.id === productId);
 
   if (!product) {
     // Handle case when product is not found
-    return res.status(404).render('error', { 
-      message: 'Product not found',
-      error: { status: 404 }
+    return res.status(404).render("error", {
+      message: "Product not found",
+      error: { status: 404 },
     });
   }
-  
-  res.render("product-details", { 
-    title: product.name, 
-    product: product,  // Pass single product instead of products array
-    products: products // Keep this if you need it for "Liknande produkter" section
+
+  res.render("product-details", {
+    title: product.name,
+    product: product, // Pass single product instead of products array
+    products: products, // Keep this if you need it for "Liknande produkter" section
   });
 });
 

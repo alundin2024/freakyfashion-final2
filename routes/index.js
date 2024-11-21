@@ -10,7 +10,7 @@ const products = [
     price: "299 SEK",
     image: "/images/tshirt,white.jpg",
     isNew: true,
-    isLiked: false,
+    isLiked: true,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
   },
@@ -21,7 +21,7 @@ const products = [
     brand: "Brothers",
     price: "399 SEK",
     image: "/images/tshirt,white,branded.jpg",
-    isNew: true,
+    isNew: false,
     isLiked: false,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
@@ -33,7 +33,7 @@ const products = [
     brand: "Zalando",
     price: "349 SEK",
     image: "/images/tshirt,orange.jpg",
-    isNew: true,
+    isNew: false,
     isLiked: false,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
@@ -45,7 +45,7 @@ const products = [
     brand: "Minus",
     price: "349 SEK",
     image: "/images/pinkshirt.jpg",
-    isNew: true,
+    isNew: false,
     isLiked: false,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
@@ -57,7 +57,7 @@ const products = [
     brand: "Lindex",
     price: "599 SEK",
     image: "/images/pants,orange.jpg",
-    isNew: true,
+    isNew: false,
     isLiked: false,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
@@ -69,7 +69,7 @@ const products = [
     brand: "Gucci",
     price: "1999 SEK",
     image: "/images/pants,beige.jpg",
-    isNew: true,
+    isNew: false,
     isLiked: false,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
@@ -81,7 +81,7 @@ const products = [
     brand: "Levis",
     price: "2495 SEK",
     image: "/images/manchester,jacket.jpg",
-    isNew: true,
+    isNew: false,
     isLiked: false,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
@@ -93,7 +93,7 @@ const products = [
     brand: "Hugo Boss",
     price: "995 SEK",
     image: "/images/duffelbag.jpg",
-    isNew: true,
+    isNew: false,
     isLiked: false,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',

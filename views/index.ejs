@@ -117,32 +117,40 @@
           </div>
         </article>
       </section>
+      <!-- Repetera hela products-sectionen & all kod!-->
       <section class="products">
-        <!--
-        Skapa en forEach-loop för min skapade array för products.
-        Rendera ut genom att calla på products.
-        -->
+        <% products.forEach(product => { %>
+        <div class="product first-product-shown other-products">
+          <a href="/product-details/<%= product.id %>">
+            <% if (product.image) { %>
+            <img
+              src="<%= product.image %>"
+              alt="<%= product.title %>"
+              class="productsFirstPage"
+            />
+            <% } %>
 
-        <!-- Bäddar in hela div-en med a-tag för ref mot product details -->
-        
-          <div class="products">
-            <% products.forEach(product => { %>
-            <div class="product">
-              <a href="/product-details/<%= product.id %>"></a>
-              <h2><%= product.name %></h2>
-              <p><%= product.brand %></p>
-              <p><%= product.price %></p>
+            <div class="prisProducts"><%= product.price %> kr</div>
 
-              <% if (product.image) { %>
-              <img src="<%= product.image %>" alt="<%= product.title %>" />
-              <% } %>
-              <button class="like-button">
-                <%= product.isLiked ? 'Liked' : 'Like' %>
-              </button>
+            <% if (product.isNew) { %>
+            <div class="nyhet">
+              <div class="nyhetBox">Nyhet</div>
             </div>
-            <% }) %>
+            <% } %>
+
+            <img
+              src="<%= product.isLiked ? '/icons/heart-fill.svg' : '/icons/heart.svg' %>"
+              alt="Like"
+              class="heart <%= product.isLiked ? 'heart-filled' : '' %>"
+            />
+          </a>
+
+          <div class="productInfo">
+            <h2><%= product.name %></h2>
+            <p><%= product.brand %></p>
           </div>
-        
+        </div>
+        <% }) %>
       </section>
 
       <section class="info">

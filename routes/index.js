@@ -9,7 +9,7 @@ const products = [
     brand: "Levis",
     price: "299 SEK",
     image: "/images/tshirt,white.jpg",
-    isNew: true,
+    isNew: false,
     isLiked: true,
     lorem:
       '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',

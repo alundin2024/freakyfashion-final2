@@ -101,10 +101,24 @@ const products = [
 ];
 
 /* GET product-details page. */
-router.get("/", function (req, res, next) {
+router.get("/:id", function (req, res, next) {
+
+  const productId = parseInt(req.params.id);
+  const product = products.find(p => p.id === productId);
+
+  if (!product) {
+    // Handle case when product is not found
+    return res.status(404).render('error', { 
+      message: 'Product not found',
+      error: { status: 404 }
+    });
+  }
   
-  res.render("product-details", { title: "Product Details", products });
-  console.log("Funkar också!");
+  res.render("product-details", { 
+    title: product.name, 
+    product: product,  // Pass single product instead of products array
+    products: products // Keep this if you need it for "Liknande produkter" section
+  });
 });
 
 module.exports = router;

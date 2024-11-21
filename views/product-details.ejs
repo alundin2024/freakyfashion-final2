@@ -14,7 +14,7 @@
           <a href="/"
             ><img
               class="mainlogo"
-              src="images/freakyfashion,mainlogo.webp"
+              src="/images/freakyfashion,mainlogo.webp"
               alt="Logotyp"
           /></a>
         </div>
@@ -31,13 +31,13 @@
             <a href=""
               ><img
                 class="header-heart"
-                src="icons/heart-fill.svg "
+                src="/icons/heart-fill.svg "
                 alt="Heart Icon"
             /></a>
             <a href=""
               ><img
                 class="basket"
-                src="icons/basket2-fill.svg"
+                src="/icons/basket2-fill.svg"
                 alt="Basket Icon"
             /></a>
           </div>
@@ -61,16 +61,21 @@
       <section class="productsDetails">
         <div class="products">
           <div class="product">
-            <h2><%= product.name %></h2>
-            <p><%= product.brand %></p>
-            <p><%= product.price %></p>
-
+            
             <% if (product.image) { %>
             <img src="<%= product.image %>" alt="<%= product.title %>" />
             <% } %>
-            <button class="like-button">
-              <%= product.isLiked ? 'Liked' : 'Like' %>
-            </button>
+            
+            <img
+              src="<%= product.isLiked ? '/icons/heart-fill.svg' : '/icons/heart.svg' %>"
+              alt="Like"
+              class="heart <%= product.isLiked ? 'heart-filled' : '' %>"
+            />
+
+            <h2><%= product.name %></h2>
+            <p><%= product.brand %></p>
+            <p><%= product.price %></p>
+            <p><%= product.lorem %></p>
 
             <button class="button buttonDetails" type="button">
               Lägg i varukorg
@@ -86,7 +91,7 @@
         <article class="spotsDetailsProducts-1">
           <a href="product-details.html"
             ><img
-              src="images\tshirt,darkblue,new.webp"
+              src="/images\tshirt,darkblue,new.webp"
               alt="Mörkblå T-Shirt"
               title="En snygg mörkblå t-shirt!"
               class="tshirt-darkblue"
@@ -98,7 +103,7 @@
         <article class="spotsDetailsProducts-2">
           <a href=""
             ><img
-              src="images\leatherjacket,black.webp"
+              src="/images\leatherjacket,black.webp"
               alt="Svart läderjacka"
               title="En snygg svart läderjacka!"
               class="leatherjacket"
@@ -110,7 +115,7 @@
         <article class="spotsDetailsProducts-3">
           <a href=""
             ><img
-              src="images\jeans,denim.webp"
+              src="/images\jeans,denim.webp"
               alt="Jeans"
               title="Ett par snygga jeans!"
               class="jeans"
@@ -124,22 +129,22 @@
 
       <section class="info">
         <div class="more-info">
-          <img id="earth" src="icons\earth.svg" alt="Jordklot" />
+          <img id="earth" src="/icons/earth.svg" alt="Jordklot" />
           <p class="frakt">Gratis frakt och returer</p>
         </div>
 
         <div class="more-info">
-          <img id="airplane" src="icons\airplane.svg" alt="Flygplan" />
+          <img id="airplane" src="/icons/airplane.svg" alt="Flygplan" />
           <p>Expressfrakt</p>
         </div>
 
         <div class="more-info">
-          <img id="shield" src="icons\shield.svg" alt="Sköld" />
+          <img id="shield" src="/icons/shield.svg" alt="Sköld" />
           <p>Säkra betalningar</p>
         </div>
 
         <div class="more-info">
-          <img id="smile" src="icons\emoji,smile.svg" alt="Smiley" />
+          <img id="smile" src="/icons/emoji,smile.svg" alt="Smiley" />
           <p>Nyheter varje dag</p>
         </div>
       </section>

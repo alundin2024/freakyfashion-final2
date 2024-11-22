@@ -5,7 +5,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
 const Database = require("better-sqlite3");
-const db = new Database("./db/product-list.db", {
+const db = new Database("./api/products.db", {
   // Skriv ut SQL-kommandona som körs mot databasen
   verbose: console.log,
   // Skapa inte db-filen om den inte redan finns.

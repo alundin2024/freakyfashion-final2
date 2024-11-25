@@ -44,3 +44,4 @@ npm run tailwind:watch
 ```
 
 7. Öppna http://localhost:3000.
+# freakyfashion-js

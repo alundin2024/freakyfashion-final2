@@ -3,7 +3,7 @@ CREATE TABLE products (
     productName TEXT,
     description TEXT,
     image,
-    brand,
-    sku,
-    price
+    brand TEXT,
+    sku TEXT,
+    price TEXT
 );

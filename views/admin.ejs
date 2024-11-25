@@ -3,6 +3,7 @@
   <head>
     <title>Administration</title>
     <link rel="stylesheet" href="/stylesheets/style,admin.css" />
+    <script src="/javascripts/admin.js"></script>
   </head>
   <body>
     <h1><%= title %></h1>
@@ -16,46 +17,23 @@
           <a href="new"
             ><button class="button2" type="button">Ny produkt</button></a
           >
-          <a href="new-product"
-            ><button class="button1" type="button">Ladda produkt</button></a
-          >
+          
+            <button id="loadProductsButton1" class="button1" type="button">Ladda produkt</button>
+          
         </div>
-        <table>
+        <table id="productList">
           <tr>
             <th>Namn</th>
             <th>SKU</th>
             <th>Pris</th>
           </tr>
+          <% products.forEach(product => { %>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><%= product.productName %></td>
+            <td><%= product.sku %></td>
+            <td><%= product.price %></td>
           </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+          <% }) %>
         </table>
       </section>
     </main>

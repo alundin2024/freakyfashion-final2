@@ -1,0 +1,41 @@
+<div class="spotsDetails">
+          <article class="spotsDetailsProducts-1">
+            <a href="product-details.html"
+              ><img
+                src="images\tshirt,darkblue,new.webp"
+                alt="Mörkblå T-Shirt"
+                title="En snygg mörkblå t-shirt!"
+                class="tshirt-darkblue"
+            /></a>
+            <h4>Blå T-Shirt</h4>
+            <h4 class="priceTshirtDarkblue">299 SEK</h4>
+            <h5>Polarn & Pyret</h5>
+          </article>
+          <article class="spotsDetailsProducts-2">
+            <a href=""
+              ><img
+                src="images\leatherjacket,black.webp"
+                alt="Svart läderjacka"
+                title="En snygg svart läderjacka!"
+                class="leatherjacket"
+            /></a>
+            <h4>Svart Läderjacka</h4>
+            <h4 class="priceJacket">799 SEK</h4>
+            <h5>Brothers</h5>
+          </article>
+          <article class="spotsDetailsProducts-3">
+            <a href=""
+              ><img
+                src="images\jeans,denim.webp"
+                alt="Jeans"
+                title="Ett par snygga jeans!"
+                class="jeans"
+            /></a>
+            <h4>Blåa Jeans</h4>
+            <h4 class="priceJeans">1099 SEK</h4>
+            <h5>Lee</h5>
+          </article>
+        </div>
+      </section>
+
+ 

@@ -1,0 +1,5 @@
+index.ejs är klar.
+product-details.ejs behöver justering av CSS samt spots behöver genereras dynamiskt.
+
+/admin/products fungerar nu samt /adin/products/all med javascript skickat mot front-end.
+/admin/new behöver kunna skicka formulär-data med hjälp av fetch-api mot backend.

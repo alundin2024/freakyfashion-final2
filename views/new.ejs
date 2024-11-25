@@ -6,7 +6,7 @@
     <script></script>
   </head>
   <body>
-    <a href="admin">
+    <a href="products">
       <h1><%= title %></h1>
     </a>
     <main class="main">
@@ -15,7 +15,7 @@
           <h3 class="produkter">Produkter</h3>
         </aside>
         <h2 class="sectionProdukter">Ny produkt</h2>
-        <form id="form" method="post">
+        <form id="productForm" method="post">
           <label for="productName">Namn</label>
           <input type="text" name="productName" id="productName" />
 
@@ -35,7 +35,7 @@
           <label for="price">Pris</label>
           <input type="text" name="price" id="price" />
 
-          <button type="submit">Lägg till</button>
+          <button id="loadProductsButton2" type="submit">Lägg till</button>
         </form>
       </section>
     </main>

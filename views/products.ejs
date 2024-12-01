@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Freaky Fashion</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/stylesheets/style,products.css" />
     <link rel="stylesheet" href="/stylesheets/magnifier.css" />
   </head>
   <body>
@@ -59,7 +59,7 @@
       </section>
 
       <section class="productsDetails">
-        <div class="products">
+        <div class="detailProducts">
           <div class="product">
             
             <% if (product.image) { %>
@@ -69,63 +69,58 @@
             <img
               src="<%= product.isLiked ? '/icons/heart-fill.svg' : '/icons/heart.svg' %>"
               alt="Like"
-              class="heart <%= product.isLiked ? 'heart-filled' : '' %>"
+              class="heart heartProduct <%= product.isLiked ? 'heart-filled' : '' %>"
             />
-
+            <div class ="productDetailsText">     
             <h2><%= product.name %></h2>
             <p><%= product.brand %></p>
-            <p><%= product.price %></p>
             <p><%= product.lorem %></p>
-
+            <p><%= product.price %></p>
+              
             <button class="button buttonDetails" type="button">
               Lägg i varukorg
             </button>
           </div>
+          </div>
         </div>
       </section>
+      <div class ="h2Top"><h2 style="text-align: center">Liknande produkter</h2></div>
       <section class="liknandeProdukter">
-        <h2 style="text-align: center">Liknande produkter</h2>
+       
+        
+        <div class="spotsDetails">x
+          <section class="products">
+            <% products.forEach(product => { %>
+            <div class="first-product-shown other-products">
+              <a href="/products/<%= product.slug %>">
+                <% if (product.image) { %>
+                <img
+                  src="<%= product.image %>"
+                  alt="<%= product.title %>"  
+                  class="productsFirstPage"
+                />
+                <% } %>
+                
+                <div class="prisProducts"><%= product.price %> kr</div>
+                
+                <% if (product.isNew) { %>
+                <div class="nyhet">
+                  <div class="nyhetBox">Nyhet</div>
+                </div>
+                <% } %>
+                
+               
+              </a>
+              
+              <div class="productInfo">
+                <h2><%= product.name %></h2>
+                <p><%= product.brand %></p>
+              </div>
+            </div>
+            <% }) %>
+          </section>
+        </div>
       </section>
-
-      <div class="spotsDetails">
-        <article class="spotsDetailsProducts-1">
-          <a href="product-details.html"
-            ><img
-              src="/images\tshirt,darkblue,new.webp"
-              alt="Mörkblå T-Shirt"
-              title="En snygg mörkblå t-shirt!"
-              class="tshirt-darkblue"
-          /></a>
-          <h4>Blå T-Shirt</h4>
-          <h4 class="priceTshirtDarkblue">299 SEK</h4>
-          <h5>Polarn & Pyret</h5>
-        </article>
-        <article class="spotsDetailsProducts-2">
-          <a href=""
-            ><img
-              src="/images\leatherjacket,black.webp"
-              alt="Svart läderjacka"
-              title="En snygg svart läderjacka!"
-              class="leatherjacket"
-          /></a>
-          <h4>Svart Läderjacka</h4>
-          <h4 class="priceJacket">799 SEK</h4>
-          <h5>Brothers</h5>
-        </article>
-        <article class="spotsDetailsProducts-3">
-          <a href=""
-            ><img
-              src="/images\jeans,denim.webp"
-              alt="Jeans"
-              title="Ett par snygga jeans!"
-              class="jeans"
-          /></a>
-          <h4>Blåa Jeans</h4>
-          <h4 class="priceJeans">1099 SEK</h4>
-          <h5>Lee</h5>
-        </article>
-      </div>
-    </section>
 
       <section class="info">
         <div class="more-info">

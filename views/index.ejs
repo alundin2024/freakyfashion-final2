@@ -121,7 +121,7 @@
       <section class="products">
         <% products.forEach(product => { %>
         <div class="product first-product-shown other-products">
-          <a href="/product-details/<%= product.id %>">
+          <a href="/products/<%= product.slug %>">
             <% if (product.image) { %>
             <img
               src="<%= product.image %>"

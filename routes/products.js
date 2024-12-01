@@ -18,7 +18,7 @@ const products = [
     image: "/images/tshirt,white.jpg",
     isLiked: false,
     lorem:
-      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
+      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit."',
     slug: generateSlug("Vit T-Shirt"),
   },
   {
@@ -30,7 +30,7 @@ const products = [
     image: "/images/tshirt,white,branded.jpg",
     isLiked: false,
     lorem:
-      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
+      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit."',
     slug: generateSlug("Vit T-Shirt med tryck"),
   },
   {
@@ -42,7 +42,7 @@ const products = [
     image: "/images/tshirt,orange.jpg",
     isLiked: false,
     lorem:
-      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
+      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit."',
     slug: generateSlug("Orange T-Shirt"),
   },
   {
@@ -54,7 +54,7 @@ const products = [
     image: "/images/pinkshirt.jpg",
     isLiked: false,
     lorem:
-      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
+      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit."',
     slug: generateSlug("Rosa T-Shirt"),
   },
   {
@@ -66,7 +66,7 @@ const products = [
     image: "/images/pants,orange.jpg",
     isLiked: false,
     lorem:
-      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
+      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit."',
     slug: generateSlug("Orangea Byxor"),
   },
   {
@@ -78,19 +78,19 @@ const products = [
     image: "/images/pants,beige.jpg",
     isLiked: false,
     lorem:
-      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
+      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit."',
     slug: generateSlug("Beige Byxor"),
   },
   {
     id: 7,
-    name: "Jacka",
+    name: "Manchester Jacka",
     title: "En rosa manchester jacka",
     brand: "Levis",
     price: "2495 SEK",
     image: "/images/manchester,jacket.jpg",
     isLiked: false,
     lorem:
-      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
+      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit."',
     slug: generateSlug("Manchester Jacka"),
   },
   {
@@ -102,15 +102,34 @@ const products = [
     image: "/images/duffelbag.jpg",
     isLiked: false,
     lorem:
-      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."',
+      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit."',
     slug: generateSlug("Magväska"),
   },
 ];
 
-/* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("index", { title: "Freaky Fashion", products });
-  console.log("Funkar!");
+/* GET product-details page. */
+router.get("/:slug", function (req, res, next) {
+  const productSlug = req.params.slug;
+  const product = products.find((p) => p.slug === productSlug);
+
+  if (!product) {
+    // Handle case when product is not found
+    return res.status(404).render("error", {
+      message: "Product not found",
+      error: { status: 404 },
+    });
+  }
+
+  const randomProducts = products
+    .filter(p => p.slug !== productSlug)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 3);
+
+  res.render("products", {
+    title: product.name,
+    product: product, // Pass single product instead of products array
+    products: randomProducts, // Keep this if you need it for "Liknande produkter" section
+  });
 });
 
 module.exports = router;

@@ -1,0 +1,598 @@
+* {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin: 0px;
+    padding: 0px;
+  }
+  .topmenu {
+    padding-bottom: 20px;
+  }
+  .hero {
+    padding-bottom: 20px;
+  }
+  .heroInfotext {
+    padding: 10px;
+  }
+  .products {
+    padding-bottom: 20px;
+  }
+
+  .product {
+    position: relative;
+  }
+
+ .h2Top {
+    display: none;
+    margin: auto;
+    text-align: center;
+ }
+
+  img {
+    width: 100%;
+  }
+  .mainlogoContainer {
+    padding: 1rem;
+  }
+  .mainlogo {
+    filter: none;
+    transition: filter 500ms;
+    height: 200px;
+    border-radius: 1em;
+  }
+  .mainlogo:hover {
+    filter: saturate(100);
+  }
+  .searchContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+  }
+  .searchbar {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .headerIcons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    width: 50%;
+    gap: 1rem;
+    .header-heart,
+    .basket {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  
+  main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .spotProduct {
+    border-radius: 1em;
+  }
+  .productsFirstPage {
+    height: 40vh;
+    object-fit: cover;
+  }
+  .productsFirstPage,
+  .heroFirstPage {
+    border-radius: 1em;
+  }
+  .topmenuFontDesign {
+    font-weight: bold;
+    font-size: 1.7em;
+  }
+  .first-tshirt {
+    border-radius: 1em;
+  }
+  .fieldsetHero {
+    border: 1px solid black;
+    border-radius: 1em;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h1,
+  h3 {
+    font-weight: normal;
+    text-align: center;
+  }
+  h4 {
+    font-weight: lighter;
+  }
+  
+  .search {
+    position: relative;
+    width: 200px;
+  }
+  .liknandeProdukter {
+    padding-bottom: 20px;
+  }
+  .sectionSpotDetails {
+    padding-bottom: 20px;
+  }
+  .spots,
+  .spotsDetails,
+  .liknandeProdukter {
+    display: none;
+  }
+  .spotsProducts-1,
+  .spotsProducts-2,
+  .spotsProducts-3 {
+    position: relative;
+  }
+  .spot-text-1,
+  .spot-text-2,
+  .spot-text-3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  .first-product-shown {
+    position: relative;
+  }
+  .prisProducts {
+    position: absolute;
+    font-weight: bold;
+    bottom: 20px;
+    right: 0;
+  }
+  .nyhet {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+  }
+  .nyhetBox {
+    background-color: rgb(67, 67, 67);
+    padding: 1rem;
+    width: 60px;
+    color: white;
+    border-radius: 1em;
+  }
+  .heart-filled {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+  }
+  .other-products {
+    position: relative;
+  }
+  
+  .heart {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+  }
+  .info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .more-info {
+    display: flex;
+    width: 100%;
+  }
+  #earth {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+  #airplane {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    transform: rotate(90deg);
+  }
+  #shield,
+  #smile {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+  .shopping {
+    padding: 10px;
+  }
+  .minasidor,
+  .kundtjanst {
+    padding: 10px;
+  }
+  
+  details[open] > summary {
+    background-color: rgb(100, 162, 255);
+  }
+  
+  /* Tar bort pilen för summary-tags*/
+  details > summary {
+    list-style: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  .button {
+    font-size: 20px;
+    padding: 0.5em 1em;
+    margin: 0.25em;
+    width: 100%;
+    max-height: max-content;
+    border-radius: 1em;
+  }
+  .wideFooter {
+    display: none;
+  }
+  .menuItem {
+    display: block;
+    padding: 10px;
+  }
+  .copyright {
+    display: none;
+  }
+  .copyrightDetails {
+    padding: 20px;
+  }
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .header {
+      display: flex;
+    }
+  
+    .mainlogo {
+      max-width: 450px;
+    }
+    .searchContainer {
+      margin-top: 92px;
+    }
+    .heropicture {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+    }
+    .topmenu {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    nav {
+      display: flex;
+    }
+    nav > a {
+      margin-right: 10px;
+    }
+    
+    .product {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px; /* Adjust spacing between image and text */
+      }
+    
+      .product img {
+        max-width: 50%; /* Adjust size of the image */
+        object-fit: cover;
+        border-radius: 10px; /* Optional: Rounded corners for the image */
+      }
+    
+      .productDetailsText {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 10px; /* Spacing between product details */
+        flex-grow: 1; /* Allows the text container to grow if necessary */
+      }
+    
+      .productDetailsText h2 {
+        font-size: 1.5em; /* Adjust heading size */
+      }
+    
+      .productDetailsText button {
+        align-self: flex-start; /* Align the button to the start */
+      }
+
+    .productsDetails {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .productDetailsText {
+      grid-column-start: 2;
+      grid-row: 1;
+    }
+    .firstProductContainer {
+      padding-right: 20px;
+    }
+    .button {
+      font-size: 10px;
+      padding: 0.5em 1em;
+      margin: 0.25em;
+      max-width: max-content;
+      max-height: max-content;
+      border-radius: 1em;
+    }
+    .heartDetails {
+      display: none;
+    }
+    .liknandeProdukter {
+      display: flex;
+      justify-content: center;
+    }
+    .spotsDetails {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px 0;
+    }
+    .spotsDetailsProducts-1,
+    .spotsDetailsProducts-2,
+    .spotsDetailsProducts-3 {
+      position: relative;
+    }
+    
+    .h2Top {
+        display: flex;
+        margin: auto;
+        text-align: center;
+     }
+    
+    .priceTshirtDarkblue,
+    .priceJacket,
+    .priceJeans {
+      position: absolute;
+      bottom: 10px;
+      right: 0px;
+    }
+    .info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 20px;
+    }
+    .more-info {
+      width: 50%;
+    }
+  
+    .detailsFooter {
+      display: none;
+    }
+    details > summary {
+      list-style: none;
+      border-bottom: none;
+    }
+    .shopping {
+      padding: 10px;
+      background-color: rgb(196, 196, 196);
+    }
+    .bold {
+      font-weight: bold;
+    }
+    footer {
+      display: grid;
+      gap: 20px;
+      background-color: rgb(180, 180, 180);
+    }
+    .wideFooter {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+    }
+    .wideFooterShopping {
+      display: grid;
+      margin-right: 100px;
+      gap: 10px;
+    }
+    .wideFooterMinaSidor {
+      display: grid;
+      margin-right: 100px;
+      gap: 10px;
+    }
+    .wideFooterKundtjänst {
+      display: grid;
+      margin-right: 100px;
+    }
+    h4 {
+      font-weight: bold;
+    }
+    .copyright {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .header {
+      display: flex;
+    }
+    .mainlogo {
+      max-width: 450px;
+    }
+    .searchContainer {
+      margin-top: 92px;
+    }
+    .topmenu {
+      display: flex;
+      flex-direction: row;
+    }
+    .fieldsetHero{
+      display:flex;
+      flex-direction: row-reverse;
+      padding: 20px;
+    }
+    .heroFirstPage{
+      width: 55%;
+    }
+
+    .product {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px; /* Adjust spacing between image and text */
+      }
+    
+      .product img {
+        max-width: 50%; /* Adjust size of the image */
+        object-fit: cover;
+        border-radius: 10px; /* Optional: Rounded corners for the image */
+      }
+    
+      .productDetailsText {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 10px; /* Spacing between product details */
+        flex-grow: 1; /* Allows the text container to grow if necessary */
+      }
+    
+      .productDetailsText h2 {
+        font-size: 1.5em; /* Adjust heading size */
+      }
+    
+      .productDetailsText button {
+        align-self: flex-start; /* Align the button to the start */
+      }
+    
+    nav {
+      display: flex;
+    }
+    nav > a {
+      margin-right: 10px;
+    }
+    .buttonDetails {
+      font-size: 20px;
+      padding: 0.5em 1em;
+      margin: 0.25em;
+      height: 10%;
+      max-width: max-content;
+      max-height: max-content;
+      border-radius: 1em;
+    }
+    .firstProductContainer {
+      padding-right: 20px;
+    }
+
+    .h2Top {
+        display: flex;
+        margin: auto;
+        text-align: center;
+     }
+    .first-t-shirt-details {
+      min-width: 475.5px;
+    }
+    .spots {
+      display: flex;
+      gap: 30px;
+      padding-bottom: 20px;
+    }
+    .liknandeProdukter {
+      display: flex;
+      justify-content: center;
+    }
+    .spotsDetails {
+      width: 100%;
+      margin-bottom: 5%;
+    }
+    .spotsDetails {
+      display: flex;
+      gap: 25px;
+    }
+    .spotsDetailsProducts-1,
+    .spotsDetailsProducts-2,
+    .spotsDetailsProducts-3 {
+      position: relative;
+    }
+    .priceTshirtDarkblue,
+    .priceJacket,
+    .priceJeans {
+      position: absolute;
+      bottom: 10px;
+      right: 0px;
+    }
+    .products {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .productsDetails {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .productDetailsText {
+      grid-column-start: 2;
+      grid-row: 1;
+    }
+    .heartDetails {
+      display: none;
+    }
+    .heart-filled {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      bottom: 60px;
+      right: 10px;
+    }
+    .heart {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      bottom: 60px;
+      right: 10px;
+    }
+    .info {
+      flex-wrap: nowrap;
+      padding: 20px;
+    }
+    .detailsFooter {
+      display: none;
+    }
+    h4 {
+      font-weight: bold;
+    }
+    footer {
+      display: grid;
+      gap: 20px;
+      background-color: rgb(180, 180, 180);
+    }
+    .wideFooter {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+    }
+    .wideFooterShopping {
+      display: grid;
+      margin-right: 100px;
+      gap: 10px;
+    }
+    .wideFooterMinaSidor {
+      display: grid;
+      margin-right: 100px;
+      gap: 10px;
+    }
+    .wideFooterKundtjänst {
+      display: grid;
+      margin-right: 100px;
+    }
+    .copyright {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+  }

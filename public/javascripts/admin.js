@@ -1,46 +1,60 @@
 console.log("Admin Client Side");
 
 let loadProducts = ()=>{
+  console.log("loadProducts(), fetch products from api");
+  fetch('/admin/api/products')
+    .then(response => response.json())
+    .then((products) => {
+      console.log("Got api response, here's the products:");
+      console.log(products.length)
 
+      console.log("clear the table of old row before we add new");
 
-fetch('/admin/api/products')
-  .then(response => response.json())
-  .then((products) => {
-    console.log(products)
-    console.log("loop through the array, create TR and TDs and add to the document");
-    for(let product of products) {
-        
-        let tr = document.createElement("tr");
+      //fetch the product list table
+      const list = document.getElementById("productList");
+      
+      //set innerhtml to nothing to clear the table from old data (if present)
+      list.innerHTML = '';
 
-        let name = document.createElement("td");
-        name.textContent = product.productName;
-        tr.appendChild(name);
+      //create a new headerRow and add to the list
+      let headerRow = document.createElement('tr');
+      headerRow.innerHTML = '<th>Namn</th><th>SKU</th><th>Pris</th>';
+      list.appendChild(headerRow);
 
-        let sku = document.createElement("td");
-        sku.textContent = product.sku;
-        tr.appendChild(sku);
+      console.log("loop through the array, create TR and TDs and add to the document");
 
-        let price = document.createElement("td");
-        price.textContent = product.price;
-        tr.appendChild(price);
-        
-        console.log(tr);
-        document.getElementById("productList").appendChild(tr);
-    }
-  })
-  .catch(error => console.error('Error:', error));
+      for(let product of products) {
+          
+          let tr = document.createElement("tr");
 
+          let name = document.createElement("td");
+          name.textContent = product.productName;
+          tr.appendChild(name);
+
+          let sku = document.createElement("td");
+          sku.textContent = product.sku;
+          tr.appendChild(sku);
+
+          let price = document.createElement("td");
+          price.textContent = product.price;
+          tr.appendChild(price);
+          
+          list.appendChild(tr);
+      }
+    })
+    .catch(error => console.error('Error:', error));
 }
 
-
 let saveNewProduct = (event) => {
+  console.log("Innan prev");
   event.preventDefault(); // Prevent form submission
+  console.log("Efter prev");
 
   const form = document.getElementById("productForm");
   const formData = new FormData(form);
   const product = Object.fromEntries(formData.entries());
 
-  fetch("/admin/new", {
+  fetch("/api/new", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -75,10 +89,5 @@ let saveNewProduct = (event) => {
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Site is ready now");
-    console.log(document.getElementById("loadProductsButton"));
     document.getElementById("loadProductsButton1").addEventListener("click", loadProducts);
-    document.getElementById("loadProductsButton2").addEventListener("click", saveNewProduct);
-    const productForm = document.getElementById("productForm");
-    productForm.addEventListener("submit", saveNewProduct);
 });
-

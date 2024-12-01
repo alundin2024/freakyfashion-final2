@@ -14,26 +14,20 @@
       <section class="section">
         <div class>
           <h2 class="sectionProdukter">Produkter</h2>
-          <a href="new"
+          <a href="/admin/products/new"
             ><button class="button2" type="button">Ny produkt</button></a
           >
-          
             <button id="loadProductsButton1" class="button1" type="button">Ladda produkt</button>
           
         </div>
         <table id="productList">
+
           <tr>
             <th>Namn</th>
             <th>SKU</th>
             <th>Pris</th>
           </tr>
-          <% products.forEach(product => { %>
-          <tr>
-            <td><%= product.productName %></td>
-            <td><%= product.sku %></td>
-            <td><%= product.price %></td>
-          </tr>
-          <% }) %>
+
         </table>
       </section>
     </main>
